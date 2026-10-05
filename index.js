@@ -20,7 +20,7 @@ var savHtml = localStorage.getItem('lightDark');
 
 if(savHtml === 'dark'){
   html.classList.add('dark');
-}else{
+}else if (savHtml === 'light') {
    html.classList.remove('dark');
 }
 
@@ -71,13 +71,13 @@ for(var i=0; i<allCard.length; i++){
    
 var font = this.getAttribute('data-font');
 localStorage.setItem('fontFamily',font)
-document.body.classList.remove('font-tajwal','font-alexandria','font-cairo')
+document.body.classList.remove('font-tajawal','font-alexandria','font-cairo')
 
 if(font == 'alexandria'){
   document.body.classList.add('font-alexandria')
 
 }else if(font == 'tajawal'){
-   document.body.classList.add('font-tajwal')
+   document.body.classList.add('font-tajawal')
   
 }else if(font == 'cairo'){
    document.body.classList.add('font-cairo')
@@ -107,7 +107,7 @@ for(i = 0; i<allCard.length; i++){
   document.body.classList.add('font-alexandria')
   
 }else if(fontFamily == 'tajawal'){
-   document.body.classList.add('font-tajwal')
+   document.body.classList.add('font-tajawal')
   
 }else if(fontFamily == 'cairo'){
    document.body.classList.add('font-cairo')
@@ -351,4 +351,8 @@ for(var j=0; j<iconAll.length; j++){
    iconAll[j].style.setProperty('opacity','0');
 }
 document.body.classList.remove('font-tajwal','font-alexandria','font-cairo')
+
+ localStorage.removeItem('lightDark');
+localStorage.removeItem('fontFamily');
+localStorage.removeItem('colorButton'); 
 })

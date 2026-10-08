@@ -3810,3 +3810,18 @@ box-shadow: 0px 3px 5px #3E4198 ;
  body {
     font-family: Tajawal, sans-serif;
 }
+.icon-nav{
+    font-size: 22px;
+    display: none;
+}
+
+.nav-links.open{
+    transform: translate(0);
+}
+@media (max-width: 1029px) {
+.icon-nav{
+   
+    display: block;
+}
+
+}

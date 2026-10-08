@@ -356,3 +356,11 @@ document.body.classList.remove('font-tajwal','font-alexandria','font-cairo')
 localStorage.removeItem('fontFamily');
 localStorage.removeItem('colorButton'); 
 })
+
+
+var linksNav = document.querySelector('.nav-links')
+var iconNav = document.querySelector('.icon-nav');
+iconNav.addEventListener('click',function(){
+linksNav.classList.toggle('open')
+
+})
